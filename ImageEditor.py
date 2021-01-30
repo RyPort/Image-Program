@@ -17,6 +17,10 @@ for row in img_ar:
         pixel[1] = 0
         pixel[2] = 0
 
+for x in range(len(img_ar)):
+    for y in range(len(img_ar[0])):
+        img_ar[x][y] = 0
+
 img_2 = Image.fromarray(img_ar)
 
 

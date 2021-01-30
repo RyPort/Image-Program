@@ -11,15 +11,12 @@ img = Image.open("ct.jpg")
 
 img_ar = np.array(Image.open("ct.jpg"))
 
-for row in img_ar:
-    for pixel in row:
-        pixel[0] = 0
-        pixel[1] = 0
-        pixel[2] = 0
 
 for x in range(len(img_ar)):
     for y in range(len(img_ar[0])):
-        img_ar[x][y] = 0
+        img_ar[x][y][0] = 0
+        img_ar[x][y][1] = 0
+        img_ar[x][y][2] = 255
 
 img_2 = Image.fromarray(img_ar)
 
